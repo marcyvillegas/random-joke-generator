@@ -1,6 +1,18 @@
-.whole-container {
+@mixin flex-col{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.joke-container {
+    @include flex-col()
+}
+
+.button-container {
+    @include flex-col()
+}
+
+#loader {
+    display: none;
 }
