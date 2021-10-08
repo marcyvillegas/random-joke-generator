@@ -5,11 +5,13 @@
 let jokeSetup = document.querySelector("#jokeSetup");
 let jokeContent = document.querySelector("#jokeContent");
 let loader = document.querySelector("#loader");
+let welcome = document.querySelector("#welcome-text");
 
 // fetch method using asynch-await
 async function getJoke() {
 
     /* Adding loader */
+    welcome.style.display = "none";
     loader.style.display = "block";
     jokeSetup.style.display = "none";   // hiding the joke setup and content
     jokeContent.style.display = "none";
@@ -23,7 +25,7 @@ async function getJoke() {
     /* Creating changes to browser */
     // adding contents to the h3
     jokeSetup.textContent = christmasJokes.setup;
-    jokeContent.textContent = christmasJokes.delivery;
+    jokeContent.textContent = christmasJokes.delivery + " 😂";
 
     jokeSetup.style.display = "block";  // displaying the setup and content joke
     jokeContent.style.display = "block";

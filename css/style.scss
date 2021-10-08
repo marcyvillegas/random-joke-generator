@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @mixin flex-col{
     display:flex;
     justify-content: center;
@@ -5,14 +7,62 @@
     flex-direction: column;
 }
 
+
+html {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #F2E8CF;
+}
+
+.header {
+    h2 {
+        font-size: 2rem;
+        margin-top: 3rem;
+        color: #518048;
+    }
+}
+
 .joke-container {
-    @include flex-col()
+    @include flex-col();
+    margin: 10rem 0 2rem 0;
+    height: 20vh;
+
+    #welcome-text {
+        padding-top:7rem;
+        font-size: 2rem;
+    }
+
+    #loader {
+        display: none;
+    }
+
+    #jokeSetup {
+        font-size: 2rem;
+        color: #BC4749;
+    }
+
+    #jokeContent {
+        font-size: 1.5rem;
+    }
 }
 
 .button-container {
-    @include flex-col()
+    @include flex-col();
+
+    button {
+        background-color: #6A994E;
+        margin-top: 1rem;
+        padding: 1rem 3rem;
+        border: none;
+        outline: none;
+        border-radius: .6rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        color: #FFFF;
+    }
 }
 
-#loader {
-    display: none;
-}
