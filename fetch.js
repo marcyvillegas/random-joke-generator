@@ -1,4 +1,5 @@
 
+// DOCS: https://sv443.net/jokeapi/v2/#joke-endpoint
 
 // fetch method using asynch-await
 async function getJoke(){
