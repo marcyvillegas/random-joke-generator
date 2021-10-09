@@ -1,4 +1,4 @@
-# Christmas Joke Generator
+# Christmas Joke Generator 🎅🎄
 
 👉 **Live Site**: https://christmas-joke-generator.netlify.app/ 👈
 
