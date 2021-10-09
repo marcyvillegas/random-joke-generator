@@ -18,14 +18,14 @@ const getJoke = async () => {
 
     /* Setting up the API endpoint */
     const response = await fetch("https://v2.jokeapi.dev/joke/Christmas"); // getting endpoint
-    const christmasJokes = await response.json();                      // returning a response of json
+    const data = await response.json();                      // returning a response of json
 
     loader.style.display = "none";  // hiding the loader
 
     /* Creating changes to browser */
     // adding contents to the h3
-    jokeSetup.textContent = christmasJokes.setup;
-    jokeContent.textContent = christmasJokes.delivery + " 😂";
+    jokeSetup.textContent = data.setup;
+    jokeContent.textContent = data.delivery + " 😂";
 
     jokeSetup.style.display = "block";  // displaying the setup and content joke
     jokeContent.style.display = "block";
