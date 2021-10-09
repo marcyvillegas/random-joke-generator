@@ -4,7 +4,7 @@
 
 **Inspired by this repo** : https://github.com/butadpj/programming-jokes-2021
 
-## Techstack used
+## Techstack
 HTML, SCSS, Vanilla Javascript
 
 ## Screenshot:
