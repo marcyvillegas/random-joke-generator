@@ -8,7 +8,7 @@ let loader = document.querySelector("#loader");
 let welcome = document.querySelector("#welcome-text");
 
 // fetch method using asynch-await
-async function getJoke() {
+const getJoke = async () => {
 
     /* Adding loader */
     welcome.style.display = "none";
