@@ -23,7 +23,7 @@ const getJoke = async () => {
     loader.style.display = "none";  // hiding the loader
 
     /* Creating changes to browser */
-    // adding contents to the h3
+    // adding contents to the h2
     jokeSetup.textContent = data.setup;
     jokeContent.textContent = data.delivery + " 😂";
 
