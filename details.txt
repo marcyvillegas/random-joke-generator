@@ -1,0 +1,4 @@
+/* LOGIC */
+// 1. Once clicked, it will direct to the new webpage
+// 2. Background color and font color will change
+// 3. API endpoint will change
