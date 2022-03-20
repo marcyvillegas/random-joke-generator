@@ -5,5 +5,24 @@ html {
 }
 
 .main-header {
-  margin-top: 3rem;
+  margin-top: 7rem;
+}
+
+.theme-container {
+  margin-top: 5rem;
+}
+
+.theme-container .theme-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 60%;
+}
+
+.theme-container .theme-buttons button {
+  cursor: pointer;
+  margin: 1rem 1rem;
+  padding: 1rem;
+  width: 12rem;
 }
