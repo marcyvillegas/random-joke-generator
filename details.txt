@@ -1,4 +1,4 @@
 /* LOGIC */
-// 1. Once clicked, it will direct to the new webpage
-// 2. Background color and font color will change
-// 3. API endpoint will change
+// 1. Once clicked, it will direct to the new webpage - module for detemining the category
+// 2. Background color and font color will change - module for changing the background and text color
+// 3. API endpoint will change - based on the getCategory module
