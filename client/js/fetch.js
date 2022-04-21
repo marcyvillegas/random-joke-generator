@@ -1,6 +1,8 @@
 
 // DOCS: https://sv443.net/jokeapi/v2/#joke-endpoint
 
+// import { x } from './utils/getCategory.js';
+
 // variables that references the h3
 let jokeSetup = document.querySelector("#jokeSetup");
 let jokeContent = document.querySelector("#jokeContent");
@@ -34,3 +36,4 @@ const getJoke = async () => {
 // Adding event listener to button
 let jokeButton = document.querySelector("#jokeButton");
 jokeButton.addEventListener("click", getJoke);
+

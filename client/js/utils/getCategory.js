@@ -11,14 +11,22 @@ let spoolyButton = document.querySelector("#spooky-button");
 let christmasButton = document.querySelector("#christmas-button");
 let punButton = document.querySelector("#pun-button");
 
+let x = "low";
+
 /**
- * 
+ * 2 functions needed
+ * 1. 
  */
-programmingButton.addEventListener("click", (e) => {
 
-    e.preventDefault();
+// Tried function
+// programmingButton.addEventListener("click", (e) => {
 
-    console.log('hi');
+//     e.preventDefault();
 
+//     window.location.href="secondPage.html";
+// });
+
+let myFunction = () => {
     window.location.href="secondPage.html";
-});
+    x = "hi"
+}
