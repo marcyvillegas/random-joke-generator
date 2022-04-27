@@ -1,32 +1,47 @@
 
 /**
  * LOGIC
- * 1. Once button is clicked, it will change the value of the variable that will be exported based on the endpoint name for every category
- * 2. It will proceed to the secondPage.html
+ * 1. Once button is clicked, get the id
+ * 2. Change the value of the variable
+ * 3. Stored in local storage based on the endpoint name for every category
+ * 4. It will proceed to the secondPage.html
  */
-
-/* Declare variables of joke category buttons */
-let programmingButton = document.querySelector("#programming-button");
-let spoolyButton = document.querySelector("#spooky-button");
-let christmasButton = document.querySelector("#christmas-button");
-let punButton = document.querySelector("#pun-button");
-
-let x = "low";
 
 /**
- * 2 functions needed
- * 1. 
+ * 3 functions needed
+ * 
+ * 1. determining what category was pressed
+ * 2. storing on the local storage on what button is clicked 
+ * 3. redirecting to the next web page
  */
 
-// Tried function
-// programmingButton.addEventListener("click", (e) => {
+/**
+ * 
+ */
+let getJokeCategory = (clickedId) => {
 
-//     e.preventDefault();
+    if (clickedId === "programming-button") return "Programming";
+    if (clickedId === "spooky-button") return "Spooky";
+    if (clickedId === "christmas-button") return "Christmas";
+    if (clickedId === "pun-button") return "Pun";
+}
 
-//     window.location.href="secondPage.html";
-// });
+/**
+ * 
+ */
+let storeJokeCategory = (jokeCategoryName) => {
+    sessionStorage.setItem("jokeCategory", jokeCategoryName);
+}
 
-let myFunction = () => {
-    window.location.href="secondPage.html";
-    x = "hi"
+/**
+ * 
+ */
+let redirectToJokeCategory = (clickedId) => {
+
+    let pressedJokeCategory = getJokeCategory(clickedId);
+
+    if (pressedJokeCategory) {
+        storeJokeCategory(pressedJokeCategory);
+        window.location.href = "secondPage.html";
+    }
 }

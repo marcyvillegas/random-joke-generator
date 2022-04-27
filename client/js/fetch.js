@@ -1,7 +1,7 @@
 
 // DOCS: https://sv443.net/jokeapi/v2/#joke-endpoint
 
-// import { x } from './utils/getCategory.js';
+// new url to be used: https://v2.jokeapi.dev/joke/ the category ?type=twopart
 
 // variables that references the h3
 let jokeSetup = document.querySelector("#jokeSetup");
