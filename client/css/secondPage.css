@@ -17,12 +17,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 10rem 0 2rem 0;
+  margin: 5rem 0 2rem 0;
   height: 20vh;
 }
 
 .joke-container #welcome-text {
-  padding-top: 7rem;
+  padding-top: 2rem;
   font-size: 2rem;
 }
 

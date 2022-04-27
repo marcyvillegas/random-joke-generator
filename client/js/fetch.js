@@ -11,6 +11,38 @@
 
 // new url to be used: https://v2.jokeapi.dev/joke/ [the category] ?type=twopart
 
+// Object literal for joke categories' color themes
+let jokeColorTheme = {
+    programming: {
+        title: "asdf",
+        welcome: "asdf",
+        loader: "sadf",
+        setup: "sadf",
+        content: "dsaf"
+    },
+    spooky: {
+        title: "asdf",
+        welcome: "asdf",
+        loader: "sadf",
+        setup: "sadf",
+        content: "dsaf"
+    },
+    christmas: {
+        title: "asdf",
+        welcome: "asdf",
+        loader: "sadf",
+        setup: "sadf",
+        content: "dsaf"
+    },
+    pun: {
+        title: "asdf",
+        welcome: "asdf",
+        loader: "sadf",
+        setup: "sadf",
+        content: "dsaf"
+    }
+}
+
 // variables that references the h3
 let jokeSetup = document.querySelector("#jokeSetup");
 let jokeContent = document.querySelector("#jokeContent");

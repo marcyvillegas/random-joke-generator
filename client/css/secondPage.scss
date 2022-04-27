@@ -25,11 +25,11 @@ body {
 
 .joke-container {
     @include flex-col();
-    margin: 10rem 0 2rem 0;
+    margin: 5rem 0 2rem 0;
     height: 20vh;
 
     #welcome-text {
-        padding-top:7rem;
+        padding-top:2rem;
         font-size: 2rem;
     }
 
