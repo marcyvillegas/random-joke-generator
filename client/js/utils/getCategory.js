@@ -1,17 +1,17 @@
 
 /**
  * LOGIC
- * 1. Once button is clicked, get the id
- * 2. Change the value of the variable
- * 3. Stored in local storage based on the endpoint name for every category
- * 4. It will proceed to the secondPage.html
+ * - Once button is clicked, get the id
+ * - Change the value of the variable
+ * - Stored in local storage based on the endpoint name for every category
+ * - It will proceed to the secondPage.html
  */
 
 /**
  * 3 functions needed
  * 
  * 1. determining what category was pressed
- * 2. storing on the local storage on what button is clicked 
+ * 2. storing on the session storage on what button is clicked 
  * 3. redirecting to the next web page
  */
 

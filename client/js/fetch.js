@@ -1,7 +1,15 @@
 
-// DOCS: https://sv443.net/jokeapi/v2/#joke-endpoint
+/**
+ * LOGIC
+ * - Object literals is for storing the categories' background, text and button colors
+ * - Get session storage
+ * - Change colors if joke category is pressed
+ * - If user goes back to index html, session storage will be empty
+ * 
+ * DOCS: https://sv443.net/jokeapi/v2/#joke-endpoint
+ */
 
-// new url to be used: https://v2.jokeapi.dev/joke/ the category ?type=twopart
+// new url to be used: https://v2.jokeapi.dev/joke/ [the category] ?type=twopart
 
 // variables that references the h3
 let jokeSetup = document.querySelector("#jokeSetup");
