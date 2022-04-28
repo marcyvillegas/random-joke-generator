@@ -3,7 +3,7 @@
  * LOGIC
  * - Once button is clicked, get the id
  * - Change the value of the variable
- * - Stored in local storage based on the endpoint name for every category
+ * - Variable is stored in session storage based on the endpoint name for every category
  * - It will proceed to the secondPage.html
  * - If in index.html, remove session storage
  */

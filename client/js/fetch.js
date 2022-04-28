@@ -65,7 +65,7 @@ let jokeCategory = sessionStorage.getItem("jokeCategory");
 /**
  * Sets up theme colors of clicekd joke category
  */
-let setUpThemeColor = (jokeCategory) => {
+let setUpThemeColor = () => {
 
     // Changing the elements' colors using the jokeColorTheme object literal
     title.style.color = jokeColorTheme[jokeCategory].title;
@@ -89,15 +89,24 @@ let fetchJoke = async () => {
     jokeContent.style.display = "none";
 
     // Sets up the API endpoint
-    const response = await fetch(`https://v2.jokeapi.dev/joke/${jokeCategory}?type=twopart`); // getting endpoint
-    const data = await response.json();                                                      // returning a response of json
+    try {
 
-    // Hides loader
-    loader.style.display = "none";
+        const response = await fetch(`https://v2.jokeapi.dev/joke/${jokeCategory}?type=twopart`); // getting endpoint
+        const data = await response.json();                                                 // returning a response of json
 
-    // Adds joke contents
-    jokeSetup.textContent = data.setup;
-    jokeContent.textContent = data.delivery + " 😂";
+        // Hides loader
+        loader.style.display = "none";
+
+        // Adds joke contents
+        jokeSetup.textContent = data.setup;
+        jokeContent.textContent = data.delivery + " 😂";
+
+    } catch (error) {
+        // Displays error message
+        console.log(error);
+        jokeSetup.textContent = "Oops!";
+        jokeContent.textContent = "There was an error 😓";
+    }
 
     // Displays joke set up and content
     jokeSetup.style.display = "block";
@@ -105,7 +114,7 @@ let fetchJoke = async () => {
 }
 
 // Calls function
-setUpThemeColor(jokeCategory);
+setUpThemeColor();
 
 // Attaches event listener to joke button
 jokeButton.addEventListener("click", fetchJoke);

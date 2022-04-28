@@ -1,4 +1,4 @@
 /* LOGIC OF THE WHOLE APP */
-// - Once clicked, it will direct to the new webpage - js file determining the category and storing to session storage 
-// - Background color and font color will change - module for changing the background and text color
-// - API endpoint will change - based on the getCategory module
+// - Once clicked, it will direct to the new webpage
+// - Background color and font color will change
+// - API endpoint will change and so does the contents
