@@ -5,6 +5,10 @@ html {
     text-align: center;
 }
 
+body {
+    background-color: #FFF0AD;
+}
+
 .main-header {
     margin-top: 7rem;
 }
@@ -19,11 +23,32 @@ html {
         margin: auto;
         width: 60%;
 
+        #programming-button {
+            background-color: #537a5a;
+        }
+
+        #spooky-button {
+            background-color: #884125;
+        }
+
+        #christmas-button {
+            background-color: #6A994E;
+        }
+
+        #pun-button {
+            background-color: #274C77;
+        }
+
         button {
             cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #fff;
             margin: 1rem 1rem;
             padding: 1rem;
             width: 12rem;
+            border-radius: 1rem;
+            border: none;
         }
     }
 }

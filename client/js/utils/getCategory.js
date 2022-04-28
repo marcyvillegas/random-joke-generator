@@ -58,4 +58,5 @@ let removeJokeCategory = () => {
     }
 }
 
+// Calls function
 removeJokeCategory();

@@ -15,39 +15,39 @@
 let jokeColorTheme = {
     Programming: {
         title: "#FFFF",
-        welcome: "asdf",
-        loader: "sadf",
-        setup: "sadf",
-        content: "dsaf",
-        background: "asdf",
-        button: "adsf"
+        welcome: "#eaebeb",
+        loader: "#eaebeb",
+        setup: "#9ae19d",
+        content: "#eaebeb",
+        background: "#474a48",
+        button: "#537a5a"
     },
     Spooky: {
-        title: "asdf",
-        welcome: "asdf",
-        loader: "sadf",
-        setup: "sadf",
-        content: "dsaf",
-        background: "asdf",
-        button: "adsf"
+        title: "#FFFF",
+        welcome: "#fffcf2",
+        loader: "#fffcf2",
+        setup: "#EB5E28",
+        content: "#fffcf2",
+        background: "#403d39",
+        button: "#884125"
     },
     Christmas: {
-        title: "asdf",
-        welcome: "asdf",
-        loader: "sadf",
-        setup: "sadf",
-        content: "dsaf",
-        background: "asdf",
-        button: "adsf"
+        title: "#000",
+        welcome: "#000",
+        loader: "#000",
+        setup: "#BC4749",
+        content: "#000",
+        background: "#F2E8CF",
+        button: "#6A994E"
     },
     Pun: {
-        title: "asdf",
-        welcome: "asdf",
-        loader: "sadf",
-        setup: "sadf",
-        content: "dsaf",
-        background: "asdf",
-        button: "adsf"
+        title: "#282928 ",
+        welcome: "#282928",
+        loader: "#282928",
+        setup: "#44799C",
+        content: "#282928",
+        background: "#C2CFD6",
+        button: "#274C77"
     }
 }
 
@@ -59,7 +59,7 @@ let jokeSetup = document.querySelector("#jokeSetup");
 let jokeContent = document.querySelector("#jokeContent");
 let jokeButton = document.querySelector("#jokeButton");
 
-// Gets the jokeCategory from session storage
+// Stores the jokeCategory from session storage
 let jokeCategory = sessionStorage.getItem("jokeCategory");
 
 /**
@@ -67,8 +67,14 @@ let jokeCategory = sessionStorage.getItem("jokeCategory");
  */
 let setUpThemeColor = (jokeCategory) => {
 
+    // Changing the elements' colors using the jokeColorTheme object literal
     title.style.color = jokeColorTheme[jokeCategory].title;
-
+    welcome.style.color = jokeColorTheme[jokeCategory].welcome;
+    loader.style.color = jokeColorTheme[jokeCategory].loader;
+    jokeSetup.style.color = jokeColorTheme[jokeCategory].setup;
+    jokeContent.style.color = jokeColorTheme[jokeCategory].content;
+    jokeButton.style.backgroundColor = jokeColorTheme[jokeCategory].button;
+    document.body.style.backgroundColor = jokeColorTheme[jokeCategory].background;
 }
 
 /**
@@ -84,7 +90,7 @@ let fetchJoke = async () => {
 
     // Sets up the API endpoint
     const response = await fetch(`https://v2.jokeapi.dev/joke/${jokeCategory}?type=twopart`); // getting endpoint
-    const data = await response.json();                                                 // returning a response of json
+    const data = await response.json();                                                      // returning a response of json
 
     // Hides loader
     loader.style.display = "none";
@@ -98,9 +104,9 @@ let fetchJoke = async () => {
     jokeContent.style.display = "block";
 }
 
-// Sets up joke category color theme
+// Calls function
 setUpThemeColor(jokeCategory);
 
-// Adds event listener to joke button
+// Attaches event listener to joke button
 jokeButton.addEventListener("click", fetchJoke);
 
