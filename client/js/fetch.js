@@ -6,14 +6,14 @@
  * - Change colors if joke category is pressed
  * - If user goes back to index html, session storage will be empty
  * 
- * DOCS: https://sv443.net/jokeapi/v2/#joke-endpoint
+ * API DOCS: https://sv443.net/jokeapi/v2/#joke-endpoint
  */
 
 // new url to be used: https://v2.jokeapi.dev/joke/ [the category] ?type=twopart
 
 // Object literal for joke categories' color themes
 let jokeColorTheme = {
-    programming: {
+    Programming: {
         title: "asdf",
         welcome: "asdf",
         loader: "sadf",
@@ -22,7 +22,7 @@ let jokeColorTheme = {
         background: "asdf",
         button: "adsf"
     },
-    spooky: {
+    Spooky: {
         title: "asdf",
         welcome: "asdf",
         loader: "sadf",
@@ -31,7 +31,7 @@ let jokeColorTheme = {
         background: "asdf",
         button: "adsf"
     },
-    christmas: {
+    Christmas: {
         title: "asdf",
         welcome: "asdf",
         loader: "sadf",
@@ -40,7 +40,7 @@ let jokeColorTheme = {
         background: "asdf",
         button: "adsf"
     },
-    pun: {
+    Pun: {
         title: "asdf",
         welcome: "asdf",
         loader: "sadf",
@@ -51,37 +51,46 @@ let jokeColorTheme = {
     }
 }
 
+// Declares variables of elements
 let title = document.querySelector("#header-text");
 let welcome = document.querySelector("#welcome-text");
 let loader = document.querySelector("#loader");
 let jokeSetup = document.querySelector("#jokeSetup");
 let jokeContent = document.querySelector("#jokeContent");
+let jokeButton = document.querySelector("#jokeButton");
 
-// fetch method using asynch-await
-const getJoke = async () => {
+/**
+ * 
+ */
 
-    /* Adding loader */
+
+/**
+ * Changes joke theme color and fetches joke API
+ */
+const fetchJoke = async () => {
+
+    // Adds loader
     welcome.style.display = "none";
     loader.style.display = "block";
-    jokeSetup.style.display = "none";   // hiding the joke setup and content
+    jokeSetup.style.display = "none";
     jokeContent.style.display = "none";
 
-    /* Setting up the API endpoint */
+    // Sets up the API endpoint
     const response = await fetch(`https://v2.jokeapi.dev/joke/Christmas?type=twopart`); // getting endpoint
-    const data = await response.json();                      // returning a response of json
+    const data = await response.json();                                                 // returning a response of json
 
-    loader.style.display = "none";  // hiding the loader
+    // Hides loader
+    loader.style.display = "none";
 
-    /* Creating changes to browser */
-    // adding contents to the h2
+    // Adds joke contents
     jokeSetup.textContent = data.setup;
     jokeContent.textContent = data.delivery + " 😂";
 
-    jokeSetup.style.display = "block";  // displaying the setup and content joke
+    // Displays joke set up and content
+    jokeSetup.style.display = "block";
     jokeContent.style.display = "block";
 }
 
-// Adding event listener to button
-let jokeButton = document.querySelector("#jokeButton");
-jokeButton.addEventListener("click", getJoke);
+// Adds event listener to joke button
+jokeButton.addEventListener("click", fetchJoke);
 

@@ -49,11 +49,10 @@ let redirectToJokeCategory = (clickedId) => {
 }
 
 /**
- * 
+ * Removes the jokeCategory to session storage when url path is index.html
  */
 let removeJokeCategory = () => {
 
-    // if session storage is empty, return to index html
     if (window.location.pathname == "/index.html") {
         sessionStorage.removeItem('jokeCategory');
     }
