@@ -18,36 +18,44 @@ let jokeColorTheme = {
         welcome: "asdf",
         loader: "sadf",
         setup: "sadf",
-        content: "dsaf"
+        content: "dsaf",
+        background: "asdf",
+        button: "adsf"
     },
     spooky: {
         title: "asdf",
         welcome: "asdf",
         loader: "sadf",
         setup: "sadf",
-        content: "dsaf"
+        content: "dsaf",
+        background: "asdf",
+        button: "adsf"
     },
     christmas: {
         title: "asdf",
         welcome: "asdf",
         loader: "sadf",
         setup: "sadf",
-        content: "dsaf"
+        content: "dsaf",
+        background: "asdf",
+        button: "adsf"
     },
     pun: {
         title: "asdf",
         welcome: "asdf",
         loader: "sadf",
         setup: "sadf",
-        content: "dsaf"
+        content: "dsaf",
+        background: "asdf",
+        button: "adsf"
     }
 }
 
-// variables that references the h3
+let title = document.querySelector("#header-text");
+let welcome = document.querySelector("#welcome-text");
+let loader = document.querySelector("#loader");
 let jokeSetup = document.querySelector("#jokeSetup");
 let jokeContent = document.querySelector("#jokeContent");
-let loader = document.querySelector("#loader");
-let welcome = document.querySelector("#welcome-text");
 
 // fetch method using asynch-await
 const getJoke = async () => {
@@ -59,7 +67,7 @@ const getJoke = async () => {
     jokeContent.style.display = "none";
 
     /* Setting up the API endpoint */
-    const response = await fetch("https://v2.jokeapi.dev/joke/Christmas"); // getting endpoint
+    const response = await fetch(`https://v2.jokeapi.dev/joke/Christmas?type=twopart`); // getting endpoint
     const data = await response.json();                      // returning a response of json
 
     loader.style.display = "none";  // hiding the loader
