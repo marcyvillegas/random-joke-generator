@@ -9,5 +9,10 @@
 ## 💻 Techstack 
 HTML, SCSS, Vanilla Javascript
 
-## 📸 Screenshot:
-![Screenshot 2021-10-09 142823](https://user-images.githubusercontent.com/58241136/136646967-f93b7c11-dde9-4764-89ca-974475278150.png)
+## 📸 Screenshots:
+![image](https://user-images.githubusercontent.com/58241136/165729695-e7cf6ea5-7c61-456d-9b27-da3c907d6a9c.png)
+
+![image](https://user-images.githubusercontent.com/58241136/165729779-24285f15-87f8-4ef0-9fe8-3319fbea9ba5.png)
+
+![image](https://user-images.githubusercontent.com/58241136/165729940-1d03bcce-89b3-4597-867a-48a8340a928e.png)
+
