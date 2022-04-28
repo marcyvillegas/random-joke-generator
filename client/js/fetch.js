@@ -14,7 +14,7 @@
 // Object literal for joke categories' color themes
 let jokeColorTheme = {
     Programming: {
-        title: "asdf",
+        title: "#FFFF",
         welcome: "asdf",
         loader: "sadf",
         setup: "sadf",
@@ -51,7 +51,7 @@ let jokeColorTheme = {
     }
 }
 
-// Declares variables of elements
+// Declares variables of html elements
 let title = document.querySelector("#header-text");
 let welcome = document.querySelector("#welcome-text");
 let loader = document.querySelector("#loader");
@@ -59,15 +59,22 @@ let jokeSetup = document.querySelector("#jokeSetup");
 let jokeContent = document.querySelector("#jokeContent");
 let jokeButton = document.querySelector("#jokeButton");
 
-/**
- * 
- */
-
+// Gets the jokeCategory from session storage
+let jokeCategory = sessionStorage.getItem("jokeCategory");
 
 /**
- * Changes joke theme color and fetches joke API
+ * Sets up theme colors of clicekd joke category
  */
-const fetchJoke = async () => {
+let setUpThemeColor = (jokeCategory) => {
+
+    title.style.color = jokeColorTheme[jokeCategory].title;
+
+}
+
+/**
+ * Fetches joke API
+ */
+let fetchJoke = async () => {
 
     // Adds loader
     welcome.style.display = "none";
@@ -76,7 +83,7 @@ const fetchJoke = async () => {
     jokeContent.style.display = "none";
 
     // Sets up the API endpoint
-    const response = await fetch(`https://v2.jokeapi.dev/joke/Christmas?type=twopart`); // getting endpoint
+    const response = await fetch(`https://v2.jokeapi.dev/joke/${jokeCategory}?type=twopart`); // getting endpoint
     const data = await response.json();                                                 // returning a response of json
 
     // Hides loader
@@ -90,6 +97,9 @@ const fetchJoke = async () => {
     jokeSetup.style.display = "block";
     jokeContent.style.display = "block";
 }
+
+// Sets up joke category color theme
+setUpThemeColor(jokeCategory);
 
 // Adds event listener to joke button
 jokeButton.addEventListener("click", fetchJoke);
