@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/tree.png">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Christmas Joke Generator</title>
+    <link rel="icon" href="/laugh-icon.png">
+    <link rel="stylesheet" href="client/css/index.css">
+    <title>Random Joke Generator</title>
 </head>
-
 <body>
-
-    <div class="header">
-        <h2 id="header-text">Christmas Joke Generator 🎅🎄</h2>
+    
+    <div class="main-header">
+        <h1>RANDOM JOKE GENERATOR 😂</h1>
     </div>
 
-    <div class="joke-container">
-        <h2 id="welcome-text">Welcome! <br> Click the button to get a Christmas joke 😁</h2>
-        <h3 id="loader">Thinking of a corny joke...</h3>
-        <h2 class="joke-setup" id="jokeSetup"></h2>
-        <h2 class="joke-content" id="jokeContent"></h2>
+    <div class="theme-container">
+        <h2>Choose a joke theme</h2>
+        <div class="theme-buttons">
+            <button id="programming-button" onclick="redirectToJokeCategory(this.id)">Programming 💻</button>
+            <button id="spooky-button" onclick="redirectToJokeCategory(this.id)">Spooky 👻</button>
+            <button id="christmas-button" onclick="redirectToJokeCategory(this.id)">Christmas 🎄</button>
+            <button id="pun-button" onclick="redirectToJokeCategory(this.id)">Pun 🤡</button>
+        </div>
     </div>
 
-    <div class="button-container">
-        <button id="jokeButton">Get A Joke</button>
-    </div>
-
-    <script src="/fetch.js"></script>
+    <script src="/client/js/utils/getCategory.js"></script>
 </body>
-
 </html>

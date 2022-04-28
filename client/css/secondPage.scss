@@ -18,20 +18,18 @@ body {
 }
 
 .header {
-    h2 {
-        font-size: 2rem;
-        margin-top: 3rem;
-        color: #518048;
+    h1 {
+        margin-top: 7rem;
     }
 }
 
 .joke-container {
     @include flex-col();
-    margin: 10rem 0 2rem 0;
+    margin: 5rem 0 2rem 0;
     height: 20vh;
 
     #welcome-text {
-        padding-top:7rem;
+        padding-top:2rem;
         font-size: 2rem;
     }
 
