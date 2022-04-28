@@ -9,12 +9,11 @@
  */
 
 /**
- * 4 functions
- * 
- * 1. determining what category was pressed
- * 2. storing on the session storage on what button is clicked 
- * 3. redirecting to the next web page
- * 4. remove session storage when on index.html
+ * NEEDS
+ * - determine what category was pressed
+ * - store on the session storage on what button is clicked 
+ * - redirect to the next web page
+ * - remove session storage when on index.html
  */
 
 /**
@@ -29,13 +28,6 @@ let getJokeCategory = (clickedId) => {
 }
 
 /**
- * Stores the joke category to the session storage
- */
-let storeJokeCategory = (jokeCategoryName) => {
-    sessionStorage.setItem("jokeCategory", jokeCategoryName);
-}
-
-/**
  * Redirects the webpage while storing the joke category to session storage if button is clicked
  */
 let redirectToJokeCategory = (clickedId) => {
@@ -43,7 +35,7 @@ let redirectToJokeCategory = (clickedId) => {
     let pressedJokeCategory = getJokeCategory(clickedId);
 
     if (pressedJokeCategory) {
-        storeJokeCategory(pressedJokeCategory);
+        sessionStorage.setItem("jokeCategory", pressedJokeCategory);
         window.location.href = "secondPage.html";
     }
 }
